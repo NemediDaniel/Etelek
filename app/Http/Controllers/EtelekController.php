@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Kati;
+use Resources\views\Katik\index;
 
 class EtelekController extends Controller
 {
@@ -24,6 +25,7 @@ class EtelekController extends Controller
      */
     public function create()
     {
+        return view('Katik.create');
         //
     }
 
@@ -33,6 +35,10 @@ class EtelekController extends Controller
     public function store(Request $request)
     {
         //
+        $adatok=new Kati();
+        $adatok->name=$request ->name;
+        $adatok->save();
+        return redirect()->route('adatok.index')->with('success', 'gyász lavarel');
     }
 
     /**
@@ -48,6 +54,7 @@ class EtelekController extends Controller
      */
     public function edit(string $id)
     {
+
         //
     }
 

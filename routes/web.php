@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('etelek', [EtelekController::class, 'index']);
+Route::get('uj', [EtelekController::class, 'create'])->name('geci');
+Route::post('uj', [EtelekController::class, 'store'])->name('fasz');
