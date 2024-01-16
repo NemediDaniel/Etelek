@@ -19,5 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('etelek', [EtelekController::class, 'index']);
-Route::get('uj', [EtelekController::class, 'create'])->name('geci');
-Route::post('uj', [EtelekController::class, 'store'])->name('fasz');
+Route::get('uj', [EtelekController::class, 'create'])->name('letrehoz');
+Route::post('uj', [EtelekController::class, 'store'])->name('letrehozas');
+Route::delete('torles', [EtelekController::class, 'destroy'])->name('elpusztit');

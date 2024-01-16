@@ -1,6 +1,6 @@
 <h1></h1>
 
-<form action="{{route('fasz')}}">
+<form action="{{route('letrehozas')}}">
     @csrf
     <fieldset>
         <label for="name">Kategória név</label>
